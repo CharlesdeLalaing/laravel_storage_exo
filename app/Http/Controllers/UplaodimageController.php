@@ -16,10 +16,13 @@ class UplaodimageController extends Controller
         request()->validate([
             "image_link" => ['required'],
             "image_name" => ['required', 'max:50'],
+            "image_type" => ['nullable']
         ]);
 
         $newImageName = $request->image_name . '.' . $request->image_link->extension();
+
         $type = $request->file('image_link')->getClientMimeType();
+
         $request->image_link->move(public_path('images'), $newImageName);
 
         $store = new Uplaodimage;
@@ -28,7 +31,7 @@ class UplaodimageController extends Controller
         $store->image_name = $request->image_name;
 
         $store->save();
-        redirect('/back-office');
+        return redirect('/back-office');
 
     }
 }

@@ -1,4 +1,5 @@
 @extends('b-o.layout.base')
+@extends('b-o.pages.flash')
 
 @section('content')
     <div class="container">
