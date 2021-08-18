@@ -11,7 +11,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Image Name</label>
-                <input type="string" name="image_name" value="{{old('image_name')}}" class="form-control" id="exampleInputPassword1" >
+                <input type="string" name="image_name" value="{{old('image_name')}}" class="form-control" id="exampleInputPassword1" placeholder="no spaces required">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
