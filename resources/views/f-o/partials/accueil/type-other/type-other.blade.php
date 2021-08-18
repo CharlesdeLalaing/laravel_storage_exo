@@ -6,6 +6,7 @@
                 <th scope="col">File Type</th>
                 <th scope="col">File Link</th>
                 <th scope="col">File Name</th>
+                <th scope="col">Visual</th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,9 @@
                         <td>{{$image_upload->image_type}}</td>
                         <td>{{$image_upload->image_link}}</td>
                         <td>{{$image_upload->image_name}}</td>
+                        <td>
+                            <img src={{asset('images/other.png')}} width="30px" height="30px" alt="other" >
+                        </td>
                     </tr>
                 @endif
             @endforeach
