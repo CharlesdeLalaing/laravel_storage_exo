@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Uplaodimage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UplaodimageController extends Controller
 {
@@ -87,5 +88,10 @@ class UplaodimageController extends Controller
 
         $destroy->delete();
         return redirect()->back()->with('status', 'image deleted successuflly');
+    }
+
+    public function download($id){
+        $download = Uplaodimage::find($id);
+        return Storage::download(public_path('images/'.$download->image_link));
     }
 }

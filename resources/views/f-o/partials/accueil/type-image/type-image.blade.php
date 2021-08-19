@@ -7,6 +7,7 @@
                 <th scope="col">File Link</th>
                 <th scope="col">File Name</th>
                 <th scope="col">Visuel</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>

@@ -10,6 +10,7 @@
                 <th scope="col">Image visual</th>
                 <th scope="col">edit item</th>
                 <th scope="col">delete item</th>
+                <th scope="col">download item</th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +34,9 @@
                             <button type="submit" class="btn btn-danger text-white">Delete</button>
                         </form>
                     </td>
-                </tr>
+                    <td>
+                        <a class="btn btn-primary text-white" href="/back-office/upload/{{$image_upload->id}}/download">DOWNLOAD</a>
+                    </td>
             @endforeach
         </tbody>
     </table>

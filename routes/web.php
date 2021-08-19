@@ -36,4 +36,5 @@ Route::get('/back-office/upload/{id}/show', [UplaodimageController::class,'show'
 Route::get('/back-office/upload/{id}/edit', [UplaodimageController::class,'edit']);
 Route::put('/back-office/upload/{id}/update', [UplaodimageController::class,'update']);
 Route::delete('/back-office/upload/{id}/destroy', [UplaodimageController::class,'destroy']);
+Route::get('/back-office/upload/{id}/download', [UplaodimageController::class,'download']);
 
